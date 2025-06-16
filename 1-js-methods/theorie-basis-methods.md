@@ -1,4 +1,4 @@
-## 1. Array Methods
+## Array Methods
 
 ### Wat zijn Array Methods?
 
