@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 4.1 - Simpele Opslag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💾 Naam Opslaan</h1>
+        
+        <div class="opdracht-info">
+            <h3>🎯 Opdracht</h3>
+            <p>Maak een systeem waar gebruikers hun naam kunnen opslaan. De naam moet blijven bestaan als je de pagina herlaadt.</p>
+        </div>
+        
+        <div class="app">
+            <div class="naam-app">
+                <div class="input-group">
+                    <label for="naam-input">Voer je naam in:</label>
+                    <input type="text" id="naam-input" placeholder="Bijv. Jan Jansen">
+                </div>
+                
+                <div class="button-group">
+                    <button onclick="slaOpNaam()" class="btn btn-primary">💾 Naam Opslaan</button>
+                    <button onclick="wisNaam()" class="btn btn-danger">🗑️ Naam Wissen</button>
+                </div>
+                
+                <div class="welkom-container">
+                    <p id="welkom-bericht">Voer je naam in om een welkomstbericht te krijgen.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tips">
+            <h3>💡 Tips</h3>
+            <ul>
+                <li>Gebruik <code>localStorage.setItem()</code> en <code>localStorage.getItem()</code></li>
+                <li>Vergeet niet input validatie (lege namen afwijzen)</li>
+                <li>Test door de pagina te herladen</li>
+                <li>Check de Application tab in DevTools om localStorage te zien</li>
+            </ul>
+        </div>
+        
+        <div class="checklist">
+            <h3>✅ Test Checklist</h3>
+            <ul>
+                <li>□ Naam invoeren en opslaan werkt</li>
+                <li>□ Welkomstbericht verschijnt</li>
+                <li>□ Na pagina herladen blijft welkomstbericht zichtbaar</li>
+                <li>□ Wissen van naam werkt</li>
+                <li>□ Lege input wordt afgewezen</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

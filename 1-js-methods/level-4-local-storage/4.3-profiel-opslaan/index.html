@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 4.3 - Profiel Opslaan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>👤 Gebruikersprofiel</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Maak een formulier waar gebruikers hun profiel kunnen opslaan. De gegevens moeten blijven bestaan in
+        localStorage.</p>
+    </div>
+
+    <div class="profiel-app">
+      <form id="profiel-form" class="profiel-form">
+        <div class="form-group">
+          <label for="naam">Naam:</label>
+          <input type="text" id="naam" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="leeftijd">Leeftijd:</label>
+          <input type="number" id="leeftijd" min="1" max="120">
+        </div>
+
+        <div class="form-group">
+          <label for="kleur">Favoriete kleur:</label>
+          <select id="kleur">
+            <option value="">Kies een kleur</option>
+            <option value="rood">Rood</option>
+            <option value="blauw">Blauw</option>
+            <option value="groen">Groen</option>
+            <option value="geel">Geel</option>
+            <option value="paars">Paars</option>
+          </select>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" onclick="slaProfielOp()" class="btn btn-primary">💾 Profiel Opslaan</button>
+          <button type="button" onclick="wisProfiel()" class="btn btn-danger">🗑️ Profiel Wissen</button>
+        </div>
+      </form>
+
+      <div id="profiel-weergave" class="profiel-weergave">
+        <p>Nog geen profiel opgeslagen.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 4.2 - Todo Lijst</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>📝 Todo Lijst</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Maak een todo lijst die taken opslaat in localStorage. Taken moeten blijven bestaan na het herladen van de
+        pagina.</p>
+    </div>
+
+    <div class="todo-app">
+      <div class="input-container">
+        <input type="text" id="nieuwe-taak" placeholder="Voeg een nieuwe taak toe...">
+        <button onclick="voegTaakToe()" class="btn btn-primary">➕ Toevoegen</button>
+      </div>
+
+      <div class="stats">
+        <span id="aantal-taken">0</span> taken totaal
+      </div>
+
+      <div id="taken-lijst" class="taken-lijst">
+        <!-- Taken worden hier dynamisch toegevoegd -->
+      </div>
+
+      <div class="actions">
+        <button onclick="wisAlleTaken()" class="btn btn-danger">🗑️ Alles Wissen</button>
+      </div>
+    </div>
+
+    <div class="tips">
+      <h3>💡 Tips</h3>
+      <ul>
+        <li>Gebruik <code>localStorage.setItem()</code> en <code>localStorage.getItem()</code></li>
+        <li>Vergeet niet <code>JSON.stringify()</code> en <code>JSON.parse()</code></li>
+        <li>Test door de pagina te herladen</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
