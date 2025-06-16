@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 6.1 - Multi-criteria Filtering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🚗 Auto Zoeker</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Bouw een systeem waar gebruikers op meerdere criteria tegelijk kunnen filteren (merk, jaar, prijs, brandstof).
+      </p>
+    </div>
+
+    <div class="app">
+      <!-- Multi-Filter Panel -->
+      <div class="multi-filters">
+        <h3>🔍 Geavanceerd Zoeken</h3>
+
+        <div class="filter-grid">
+          <div class="filter-group">
+            <label for="merk-filter">Merk:</label>
+            <select id="merk-filter" onchange="updateFilters()">
+              <option value="">Alle merken</option>
+              <option value="Toyota">Toyota</option>
+              <option value="Tesla">Tesla</option>
+              <option value="BMW">BMW</option>
+              <option value="Audi">Audi</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="min-jaar">Min. jaar:</label>
+            <input type="number" id="min-jaar" min="2000" max="2025" onchange="updateFilters()">
+          </div>
+
+          <div class="filter-group">
+            <label for="max-jaar">Max. jaar:</label>
+            <input type="number" id="max-jaar" min="2000" max="2025" onchange="updateFilters()">
+          </div>
+
+          <div class="filter-group">
+            <label for="max-prijs">Max. prijs:</label>
+            <input type="number" id="max-prijs" min="0" step="1000" onchange="updateFilters()">
+          </div>
+
+          <div class="filter-group">
+            <label for="brandstof-filter">Brandstof:</label>
+            <select id="brandstof-filter" onchange="updateFilters()">
+              <option value="">Alle types</option>
+              <option value="Benzine">Benzine</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Elektrisch">Elektrisch</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <button onclick="resetAllFilters()" class="btn btn-secondary">🔄 Reset Alles</button>
+          </div>
+        </div>
+
+        <!-- Actieve Filters Display -->
+        <div id="actieve-filters" class="actieve-filters">
+          <!-- Actieve filters worden hier getoond -->
+        </div>
+      </div>
+
+      <!-- Resultaten -->
+      <div class="resultaten">
+        <div class="resultaat-header">
+          <span id="aantal-resultaten">0 auto's gevonden</span>
+          <button onclick="exporteerResultaten()" class="btn btn-info">📊 Exporteer</button>
+        </div>
+
+        <div id="auto-container" class="auto-grid">
+          <!-- Auto's worden hier getoond -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
