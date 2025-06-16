@@ -1,4 +1,4 @@
-## 4. API's (Application Programming Interface)
+## API's (Application Programming Interface)
 
 ### Wat zijn API's?
 
