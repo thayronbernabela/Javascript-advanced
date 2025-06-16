@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 5.2 - Zoek Filter Systeem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🛍️ Product Catalogus</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Bouw een complete productencatalogus met zoeken, filteren, sorteren en favorieten. Alles moet lokaal opgeslagen
+        worden.</p>
+    </div>
+
+    <div class="app">
+      <!-- Filters -->
+      <div class="filters">
+        <h3>🔍 Filters</h3>
+
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="zoek-input">Zoeken:</label>
+            <input type="text" id="zoek-input" placeholder="Zoek producten..." oninput="handleZoekInput(event)">
+          </div>
+
+          <div class="filter-group">
+            <label for="categorie-select">Categorie:</label>
+            <select id="categorie-select" onchange="handleCategorieChange(event)">
+              <option value="">Alle categorieën</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Meubels">Meubels</option>
+              <option value="Gaming">Gaming</option>
+              <option value="Keuken">Keuken</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sorteer-select">Sorteren:</label>
+            <select id="sorteer-select" onchange="handleSorteerChange(event)">
+              <option value="naam">Naam (A-Z)</option>
+              <option value="prijs-laag">Prijs (Laag-Hoog)</option>
+              <option value="prijs-hoog">Prijs (Hoog-Laag)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-row">
+          <div class="filter-group">
+            <label for="min-prijs">Min. prijs:</label>
+            <input type="number" id="min-prijs" min="0" onchange="handlePrijsChange()">
+          </div>
+
+          <div class="filter-group">
+            <label for="max-prijs">Max. prijs:</label>
+            <input type="number" id="max-prijs" min="0" onchange="handlePrijsChange()">
+          </div>
+
+          <button onclick="resetFilters()" class="btn btn-secondary">🔄 Reset</button>
+        </div>
+      </div>
+
+      <!-- Resultaten -->
+      <div class="resultaten">
+        <div class="resultaat-info">
+          <span id="resultaat-teller">0 producten</span>
+        </div>
+
+        <div id="producten-container" class="producten-grid">
+          <!-- Producten worden hier dynamisch toegevoegd -->
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist">
+      <h3>✅ Functionaliteiten die je moet bouwen</h3>
+      <ul>
+        <li>□ Zoekfunctie (filter op naam)</li>
+        <li>□ Categorie filter</li>
+        <li>□ Prijs filter (min/max)</li>
+        <li>□ Sorteer opties</li>
+        <li>□ Favorieten systeem</li>
+        <li>□ Alles opslaan in localStorage</li>
+        <li>□ Reset filters functie</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

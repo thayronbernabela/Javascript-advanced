@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 5.1 - Favorieten Systeem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>📚 Mijn Boekenlijst</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Bouw een favorieten systeem voor boeken. Gebruikers moeten boeken kunnen markeren als favoriet en deze lijst
+        moet opgeslagen blijven in localStorage.</p>
+    </div>
+
+    <div class="app">
+      <!-- Statistieken -->
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number" id="totaal-boeken">0</span>
+          <span class="stat-label">Totaal Boeken</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="aantal-favorieten">0</span>
+          <span class="stat-label">Favorieten</span>
+        </div>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="alle" onclick="toonTab('alle')">
+          📖 Alle Boeken
+        </button>
+        <button class="tab-btn" data-tab="favorieten" onclick="toonTab('favorieten')">
+          ❤️ Mijn Favorieten
+        </button>
+      </div>
+
+      <!-- Boeken Container -->
+      <div id="boeken-container" class="boeken-grid">
+        <!-- Boeken worden hier dynamisch toegevoegd -->
+      </div>
+    </div>
+
+    <!-- Debug Panel -->
+    <div class="debug-panel">
+      <h3>🔧 Debug Panel</h3>
+      <div class="debug-actions">
+        <button onclick="debugToonFavorieten()" class="debug-btn">Toon Favorieten Array</button>
+        <button onclick="debugToonLocalStorage()" class="debug-btn">Toon localStorage</button>
+        <button onclick="debugWisFavorieten()" class="debug-btn danger">Wis Alle Favorieten</button>
+      </div>
+      <div id="debug-output"></div>
+    </div>
+
+    <div class="checklist">
+      <h3>✅ Functionaliteiten die je moet bouwen</h3>
+      <ul>
+        <li>□ Alle boeken weergeven in kaarten</li>
+        <li>□ Favoriet button (hart) per boek</li>
+        <li>□ Toggle favorieten (toevoegen/verwijderen)</li>
+        <li>□ Visuele feedback (vol/leeg hart)</li>
+        <li>□ Favorieten opslaan in localStorage</li>
+        <li>□ Filter "Alle Boeken" / "Mijn Favorieten"</li>
+        <li>□ Statistieken tellers updaten</li>
+        <li>□ Data blijft bestaan na pagina herlaad</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
