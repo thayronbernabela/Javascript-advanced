@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opdracht 6.3 - Geavanceerde Zoek</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>🔍 Slimme Zoekfunctie</h1>
+
+    <div class="opdracht-info">
+      <h3>🎯 Opdracht</h3>
+      <p>Bouw een geavanceerde zoekfunctie die in meerdere velden zoekt, resultaten sorteert op relevantie en
+        zoekgeschiedenis onthoudt.</p>
+    </div>
+
+    <div class="app">
+      <!-- Zoek Interface -->
+      <div class="zoek-interface">
+        <div class="zoek-balk">
+          <input type="text" id="hoofd-zoek" placeholder="Zoek in alle velden..." oninput="handleZoekInput(event)">
+          <button onclick="wisZoekterm()" class="btn btn-clear">✕</button>
+          <button onclick="geavanceerdZoeken()" class="btn btn-primary">🔍 Zoek</button>
+        </div>
+
+        <!-- Zoek Suggesties -->
+        <div id="zoek-suggesties" class="zoek-suggesties">
+          <!-- Suggesties worden hier getoond -->
+        </div>
+
+        <!-- Geavanceerde Opties -->
+        <div class="geavanceerde-opties">
+          <details>
+            <summary>⚙️ Geavanceerde Opties</summary>
+            <div class="opties-grid">
+              <label>
+                <input type="checkbox" id="zoek-naam" checked> Zoek in naam
+              </label>
+              <label>
+                <input type="checkbox" id="zoek-beschrijving" checked> Zoek in beschrijving
+              </label>
+              <label>
+                <input type="checkbox" id="zoek-tags" checked> Zoek in tags
+              </label>
+              <label>
+                <input type="checkbox" id="exacte-match"> Exacte overeenkomst
+              </label>
+              <label>
+                <input type="checkbox" id="case-sensitive"> Hoofdlettergevoelig
+              </label>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Zoekgeschiedenis -->
+      <div class="zoekgeschiedenis">
+        <h4>📅 Recente Zoekopdrachten</h4>
+        <div id="recente-zoekopdrachten" class="recente-lijst">
+          <!-- Recente zoekopdrachten hier -->
+        </div>
+        <button onclick="wisZoekgeschiedenis()" class="btn btn-sm btn-secondary">🗑️ Wis Geschiedenis</button>
+      </div>
+
+      <!-- Zoek Resultaten -->
+      <div class="zoek-resultaten">
+        <div class="resultaat-header">
+          <span id="resultaat-info">Voer een zoekterm in</span>
+          <select id="sorteer-relevantie" onchange="sorteerResultaten()">
+            <option value="relevantie">Sorteer op relevantie</option>
+            <option value="naam">Sorteer op naam</option>
+            <option value="datum">Sorteer op datum</option>
+          </select>
+        </div>
+
+        <div id="resultaten-container" class="resultaten-lijst">
+          <!-- Zoekresultaten worden hier getoond -->
+        </div>
+      </div>
+
+      <!-- Zoek Statistieken -->
+      <div class="zoek-stats">
+        <h4>📊 Zoek Statistieken</h4>
+        <div id="stats-container">
+          <div class="stat-item">
+            <span class="stat-label">Totaal zoektermen:</span>
+            <span id="totaal-zoekopdrachten">0</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Meest gezocht:</span>
+            <span id="populairste-zoekterm">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="functionaliteiten">
+      <h3>🎯 Te bouwen functionaliteiten</h3>
+      <ul>
+        <li>□ Zoeken in meerdere velden tegelijk</li>
+        <li>□ Real-time zoeksuggesties</li>
+        <li>□ Relevantie scoring (hoeveel matches)</li>
+        <li>□ Zoekgeschiedenis opslaan</li>
+        <li>□ Geavanceerde zoekopties</li>
+        <li>□ Zoekstatistieken bijhouden</li>
+        <li>□ Export zoekresultaten</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
