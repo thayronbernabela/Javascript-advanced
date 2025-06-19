@@ -1,21 +1,24 @@
 // Opdracht 2.3: Find en FindIndex
 console.log('🚀 Opdracht 2.3: Find en FindIndex');
 
-const producten = [
-    {naam: 'laptop', prijs: 800},
-    {naam: 'muis', prijs: 25},  
-    {naam: 'toetsenbord', prijs: 75},
-    {naam: 'monitor', prijs: 300}
-];
+const temperaturen = [18, 22, 25, 19, 28, 24, 21];
+const kleuren = ['rood', 'blauw', 'groen', 'geel', 'paars', 'oranje'];
 
-// TODO: Zoek het product met naam 'laptop'
-const laptop = /* jouw code hier */
-console.log('Laptop product:', laptop);
+console.log('Temperaturen:', temperaturen);
+console.log('Kleuren:', kleuren);
 
-// TODO: Zoek de index van product 'muis'
-const muisIndex = /* jouw code hier */
-console.log('Index van muis:', muisIndex);
+// TODO: Zoek de eerste temperatuur boven 25 graden
+const warmeTemperatuur = /* jouw code hier */
+console.log('Eerste warme temperatuur:', warmeTemperatuur);
 
-// TODO: Zoek het eerste product boven €200
-const duurProduct = /* jouw code hier */
-console.log('Eerste dure product:', duurProduct);
+// TODO: Zoek de index van de kleur 'groen'
+const groenIndex = /* jouw code hier */
+console.log('Index van groen:', groenIndex);
+
+// TODO: Zoek de eerste temperatuur onder 20 graden
+const koudeTemperatuur = /* jouw code hier */
+console.log('Eerste koude temperatuur:', koudeTemperatuur);
+
+// TODO: Zoek de index van de eerste temperatuur boven 23 graden
+const warmeIndex = /* jouw code hier */
+console.log('Index van eerste warme temperatuur:', warmeIndex);

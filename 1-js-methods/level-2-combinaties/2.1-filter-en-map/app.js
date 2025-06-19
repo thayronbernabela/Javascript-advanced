@@ -1,23 +1,17 @@
 // Opdracht 2.1: Filter en Map
 console.log('🚀 Opdracht 2.1: Filter en Map');
 
-const producten = [
-    {naam: 'laptop', prijs: 800},
-    {naam: 'muis', prijs: 25},  
-    {naam: 'toetsenbord', prijs: 75},
-    {naam: 'monitor', prijs: 300}
-];
+const prijzen = [800, 25, 75, 300, 150, 45];
+const productnamen = ['laptop', 'muis', 'toetsenbord', 'monitor', 'webcam', 'kabel'];
 
-console.log('Alle producten:', producten);
+console.log('Alle prijzen:', prijzen);
+console.log('Alle productnamen:', productnamen);
 
-// TODO: Filter producten onder €100
-const goedkopeProducten = /* jouw code hier */
-console.log('Goedkope producten:', goedkopeProducten);
+// TODO: Filter prijzen onder de €100
+const goedkopePrijzen = /* jouw code hier */
+console.log('Prijzen onder €100:', goedkopePrijzen);
 
-// TODO: Maak array met alleen namen van goedkope producten
-const namenGoedkoop = /* jouw code hier */
-console.log('Namen goedkope producten:', namenGoedkoop);
+// TODO: Filter productnamen die beginnen met 'm'
+const productenMetM = /* jouw code hier */
+console.log('Producten die beginnen met m:', productenMetM);
 
-// Bonus: Doe het in één regel (chaining)
-const namenGoedkoopChaining = /* jouw code hier */
-console.log('Met chaining:', namenGoedkoopChaining);

@@ -1,29 +1,20 @@
 // Opdracht 2.2: Sort Oefening
 console.log('🚀 Opdracht 2.2: Sort Oefening');
 
-const producten = [
-    {naam: 'laptop', prijs: 800},
-    {naam: 'muis', prijs: 25},  
-    {naam: 'toetsenbord', prijs: 75},
-    {naam: 'monitor', prijs: 300}
-];
+const scores = [85, 92, 76, 88, 95, 73, 89];
+const steden = ['Amsterdam', 'Utrecht', 'Rotterdam', 'Den Haag', 'Eindhoven'];
 
-console.log('Originele volgorde:', producten);
+console.log('Originele scores:', scores);
+console.log('Originele steden:', steden);
 
-// TODO: Sorteer op prijs van laag naar hoog
-const gesorteerdeProducten = /* jouw code hier */
-console.log('Gesorteerd op prijs (laag-hoog):', gesorteerdeProducten);
+// TODO: Sorteer scores van laag naar hoog
+const gesorteerdeScores = /* jouw code hier */
+console.log('Scores laag naar hoog:', gesorteerdeScores);
 
-// TODO: Sorteer op naam alfabetisch
-const gesorteerdeNamen = /* jouw code hier */
-console.log('Gesorteerd op naam:', gesorteerdeNamen);
+// TODO: Sorteer scores van hoog naar laag  
+const scoresHoogNaarLaag = /* jouw code hier */
+console.log('Scores hoog naar laag:', scoresHoogNaarLaag);
 
-// Bonus: Sorteer cursussen op duration
-const cursussen = [
-    {naam: 'JavaScript', duration: '8 uur'},
-    {naam: 'HTML', duration: '12 uur'},
-    {naam: 'CSS', duration: '3 uur'}
-];
-
-const gesorteerdeUren = /* jouw code hier - gebruik parseInt() */
-console.log('Gesorteerd op uren:', gesorteerdeUren);
+// TODO: Sorteer steden alfabetisch
+const gesorteerdeSteden = /* jouw code hier */
+console.log('Steden alfabetisch:', gesorteerdeSteden);
