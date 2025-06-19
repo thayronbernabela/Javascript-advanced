@@ -12,8 +12,3 @@ const gevonden =
   /* jouw code hier */
 
   console.log('Kleur gevonden:', gevonden);
-
-// Bonus: Case-insensitive check
-const gevondenCaseInsensitive =
-  /* jouw code hier */
-  console.log('Case-insensitive gevonden:', gevondenCaseInsensitive);
