@@ -1,3 +1,44 @@
+const person = {
+  name: "John Doe",
+  age: 30,
+  birthdate: "1995-06-15",
+  gender: "Male",
+  alive: true,
+  hobbies: ["Reading", "Gaming", "Cycling", "Cooking"],
+
+  changeName: function(newName) {
+    this.name = newName;
+  },
+
+  toggleAlive: function() {
+    this.alive = !this.alive;
+  },
+
+  addHobby: function(newHobby) {
+    this.hobbies.push(newHobby);
+  }
+};
+
+function displayPerson() {
+  const output = document.querySelector('.output');
+  output.innerHTML = `
+    <p>Name: ${person.name}</p>
+    <p>Age: ${person.age}</p>
+    <p>Birthdate: ${person.birthdate}</p>
+    <p>Gender: ${person.gender}</p>
+    <p>Alive: ${person.alive}</p>
+    <p>Hobbies: ${person.hobbies.join(", ")}</p>
+  `;
+}
+
+displayPerson();
+
+person.changeName("Jane Smith");
+person.toggleAlive();
+person.addHobby("Swimming");
+
+displayPerson();
+
 // Stap 1
 
 // Maak een persoon object waar je allemaal eigenschappen van een persoon in kunt opslaan en tonen op het scherm.
