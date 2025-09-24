@@ -3,7 +3,7 @@ const book = {
   author: "Harper Lee",
   publisher: "J.B. Lippincott & Co.",
   year: 1960,
-  sold: 40000000,
+  sold: 4000000,
   price: "$15.99"
 };
 

@@ -32,7 +32,6 @@ function displayPerson() {
 }
 
 displayPerson();
-
 person.changeName("Jane Smith");
 person.toggleAlive();
 person.addHobby("Swimming");

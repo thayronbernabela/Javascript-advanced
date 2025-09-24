@@ -9,6 +9,8 @@ addMarvel();
 for (let film of marvels) {
     console.log(film)
 }
+
+ 
 // Je gaat even oefenen met het gebruiken van een arrow function en de for/of loop. 
 
 // Maak een array genaamd 'marvels' en plaats hier 4 Marvel films in.

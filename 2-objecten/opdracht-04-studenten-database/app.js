@@ -41,7 +41,7 @@ const students = [
   },
 ];
 
-// function toonAlleStudenten() {
+//
 //   // 📝 WAT MOET JE DOEN:
 //   // 1. Loop door de hele 'students' array
 //   // 2. Maak voor elke student een HTML article element
@@ -56,22 +56,63 @@ const students = [
 //   //     📊 Cijfer: 8.5 | Status: ✅ Actief
 //   // </article>
 // }
-
-function toonActieveStudenten() {
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten waar actief === true
   // 2. Toon alleen die gefilterde studenten (gebruik dezelfde HTML als hierboven)
   //
   // 💡 TIP: Gebruik array.filter() en dan dezelfde logica als toonAlleStudenten()
-}
-
-function toonTopStudenten() {
   // 📝 WAT MOET JE DOEN:
   // 1. Filter de students array op studenten met cijfer >= 8.0
   // 2. Toon alleen die gefilterde studenten
   //
   // 💡 TIP: Gebruik array.filter() met een conditie op het cijfer
-}
 
 // 🚀 START DE APPLICATIE - roep deze aan als de pagina laadt
+
+const studentenLijst = document.getElementById('studenten-lijst');
+
+function toonAlleStudenten() {
+  studentenLijst.innerHTML = students
+    .map(student => {
+      return `
+        <article class="${student.actief ? 'actief' : 'inactief'}">
+          <strong>${student.naam}</strong> (${student.leeftijd} jaar)<br>
+          ${student.studie}<br>
+          Cijfer: ${student.cijfer} | Status: ${student.actief ? 'Actief' : 'Inactief'}
+        </article>
+      `;
+    })
+    .join('');
+}
+
+function toonActieveStudenten() {
+  const actieveStudenten = students.filter(student => student.actief);
+  studentenLijst.innerHTML = actieveStudenten
+    .map(student => {
+      return `
+        <article class="actief">
+          <strong>${student.naam}</strong> (${student.leeftijd} jaar)<br>
+          ${student.studie}<br>
+          Cijfer: ${student.cijfer} | Status: Actief
+        </article>
+      `;
+    })
+    .join('');
+}
+
+function toonTopStudenten() {
+  const topStudenten = students.filter(student => student.cijfer >= 8.0);
+  studentenLijst.innerHTML = topStudenten
+    .map(student => {
+      return `
+        <article class="${student.actief ? 'actief' : 'inactief'}">
+          <strong>${student.naam}</strong> (${student.leeftijd} jaar)<br>
+          ${student.studie}<br>
+          Cijfer: ${student.cijfer} | Status: ${student.actief ? 'Actief' : 'Inactief'}
+        </article>
+      `;
+    })
+    .join('');
+}
+
 toonAlleStudenten();
