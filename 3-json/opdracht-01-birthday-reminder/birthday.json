@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Sophie Jansen",
+    "age": 24,
+    "image": "./images/1meisje"
+  },
+  {
+    "name": "Milan Vermeer",
+    "age": 30,
+    "image": "./images/1jongen"
+  },
+  {
+    "name": "Emma de Vries",
+    "age": 22,
+    "image": "./images/2meisje"
+  },
+  {
+    "name": "Lucas Willems",
+    "age": 27,
+    "image": "./images/2jongen"
+  },
+  {
+    "name": "Isabella Bakker",
+    "age": 29,
+    "image": "./images/3meisje"
+  },
+  {
+    "name": "Noah Visser",
+    "age": 26,
+    "image":"./images/3jongen"
+  }
+]
+
